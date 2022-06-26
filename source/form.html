@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="root">
+<header class="root__header header">
+    <div class="logo">Лого</div>
+
+    <ul class="header__nav nav">
+        <li class="nav__item"><a class="nav__link">Главная</a></li>
+        <li class="nav__item"><a class="nav__link">Каталог продукции</a></li>
+        <li class="nav__item"><a class="nav__link">Подбор программы</a></li>
+    </ul>
+</header>
+<main class="root__content">
+    <section class="section section_wrap">
+            <h1 class="title">Подбор программы</h1>
+
+            <p class="subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
+    </section>
+        <form class="feedback" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="feedback__wrap content__wrap">
+                <fieldset class="feedback__fieldset feedback__parameters">
+                    <legend class="visually-hidden">Данные вашего кота</legend>
+
+                    <ul class="feedback__list">
+                        <li class="feedback__item">
+                            <label class="feedback__label label" for="catname">Имя:<sup>*</sup></label>
+                            <input class="feedback__input input" type="text" id="catname" name="catname"
+                                   placeholder="Барсик" required>
+                        </li>
+                        <li class="feedback__item">
+                            <label class="feedback__label label" for="catweight">Вес (кг):<sup>*</sup></label>
+                            <input class="feedback__input input" type="text" id="catweight" name="catweight"
+                                   placeholder="7" required>
+                        </li>
+                        <li class="feedback__item">
+                            <label class="feedback__label label" for="catage">Возраст (лет):</label>
+                            <input class="feedback__input input" type="text" id="catage" name="catage" placeholder="7">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="feedback__fieldset feedback__programs">
+                    <legend class="visually-hidden">Вариант программы</legend>
+
+                    <ul class="feedback__list feedback__list_program">
+                        <li class="feedback__item">
+                            <input class="feedback__radio visually-hidden" type="radio" id="programslim" name="program"
+                                   checked>
+                            <label class="feedback__label_radio label_radio label" for="programslim">Похудение</label>
+                        </li>
+                        <li class="feedback__item">
+                            <input class="feedback__radio visually-hidden" type="radio" id="programpro" name="program">
+                            <label class="feedback__radio label_radio label" for="programpro">Набор массы</label>
+                        </li>
+                        <li class="feedback__item">
+                            <input class="feedback__radio visually-hidden" type="radio" id="programunknown"
+                                   name="program">
+                            <label class="feedback__radio label_radio label" for="programunknown">Не знаю (Нужен ваш
+                                совет)</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="feedback__fieldset feedback__contacts">
+                    <legend class="feedback__legend heading">Контактные данные (владельца кота)</legend>
+
+                    <ul class="feedback__list feedback__list-contacts">
+                        <li class="feedback__item">
+                            <label class="feedback__label label" for="email">E-mail:<sup>*</sup></label>
+                            <input class="feedback__input feedback__input_contacts input" type="email" id="email"
+                                   name="email" placeholder="kuklachev@gmail.com" required>
+                            <svg class="feedback__image feedback__image_email">
+                                <use></use>
+                            </svg>
+                        </li>
+                        <li class="feedback__item">
+                            <label class="feedback__label label" for="phone">Телефон:<sup>*</sup></label>
+                            <input class="feedback__input feedback__input--contacts input" type="tel" id="phone"
+                                   name="phone" placeholder="8 (960) 900-60-90" required>
+                            <svg class="feedback__image feedback__image--phone">
+                                <use></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <div class="feedback__fieldset feedback__message">
+                    <label class="feedback__legend heading" for="message">Комментарий</label>
+                    <div class="feedback__message-wrapper">
+                        <textarea class="feedback__textarea input" id="message" name="message"
+                        placeholder="Расскажите обо всех повадках кота"></textarea>
+                    </div>
+                </div>
+
+                <fieldset class="feedback__fieldset feedback__additional">
+                    <legend class="feedback__legend heading">Дополнительно</legend>
+
+                    <ul class="feedback__list feedback__list-additional">
+                        <li class="feedback__item">
+                            <input class="feedback__checkbox visually-hidden" type="checkbox" id="sugarsubstitute"
+                                   name="additional" checked>
+                            <label class="feedback__label_checkbox label_checkbox label" for="sugarsubstitute">Сахарозаменитель</label>
+                        </li>
+                        <li class="feedback__item">
+                            <input class="feedback__checkbox visually-hidden" type="checkbox" id="water"
+                                   name="additional">
+                            <label class="feedback__label_checkbox label_checkbox label" for="water">Питьевая
+                                вода</label>
+                        </li>
+                        <li class="feedback__item">
+                            <input class="feedback__checkbox visually-hidden" type="checkbox" id="milk"
+                                   name="additional">
+                            <label class="feedback__label_checkbox label_checkbox label" for="milk">Молоко</label>
+                        </li>
+                        <li class="feedback__item">
+                            <input class="feedback__checkbox visually-hidden" type="checkbox" id="vitamins"
+                                   name="additional">
+                            <label class="feedback__label_checkbox label_checkbox label" for="vitamins">Витамины</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <div class="feedback__submit-wrapper">
+                    <button class="feedback__button button button_green" type="submit">Отправить заявку</button>
+
+                    <p class="feedback__notification"><sup>*</sup>— Обязательные поля</p>
+                </div>
+            </div>
+        </form>
+
+        <section class="page-footer__contacts contacts contacts--inner content-wrapper">
+            <h2 class="visually-hidden">Контактная информация</h2>
+
+            <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+
+            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>
+                <span class="contacts__city">Санкт-Петербург</span>
+            </address>
+        </section>
+</main>
+
+<footer class="root__footer">
+    <section class="section footer">
+        <a href="index.html" class="footer__logo"> <img src="#" alt="Cat Energy" width="128" height="24"/></a>
+
+        <div class="footer__social-wrap">
+            <ul class="footer__social social">
+                <li class="social__item">
+                    <a class="social__link social__link_vk" href="#">
+                        <span class="visually-hidden">VK</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link_inst" href="#">
+                        <span class="visually-hidden">Inst</span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link_fb" href="#">
+                        <span class="visually-hidden">Facebook</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <a class="footer__copyright_link" href="https://htmlacademy.ru/intensive/adaptive">
+                HTML Academy logo
+            </a>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
