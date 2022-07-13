@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  text-transform: uppercase;
+  list-style-type: none;
+
+  &__link {
+    margin: 0 12px;
+    padding: 12px 0;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    outline: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &:focus {
+      border-bottom-color: $primary-color;
+    }
+
+    &_white {
+      color: $white-color;
+
+      &:hover {
+        border-bottom-color: $white-color;
+      }
+    }
+  }
+}
+

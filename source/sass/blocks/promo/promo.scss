@@ -1,0 +1,10 @@
+.promo {
+  content: "";
+  background: url("../images/bg/cat.jpg") no-repeat center/cover;
+
+  &::after {
+    content: "";
+    background: $primary-color;
+    opacity: 0.5;
+  }
+}
