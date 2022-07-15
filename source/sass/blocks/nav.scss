@@ -1,0 +1,42 @@
+.nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  &__item {
+    padding: 22px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+    border-top: 1px solid $color-gray;
+
+    &:last-child {
+      border-bottom: 1px solid $color-gray;
+    }
+  }
+
+  &__link {
+    padding: 4px;
+    text-decoration: none;
+    color: $color-black;
+    border-bottom: 2px solid transparent;
+    outline: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      border-bottom-color: $color-primary;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
