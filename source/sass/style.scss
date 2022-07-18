@@ -2,7 +2,11 @@
 @import 'global/index';
 
 /* Блоки */
+@import "blocks/title.scss";
+@import "blocks/subtitle.scss";
+@import "blocks/button.scss";
 @import 'blocks/section.scss';
 @import 'blocks/header.scss';
 @import 'blocks/nav.scss';
 @import 'blocks/nav-burger.scss';
+@import "blocks/promo.scss";
