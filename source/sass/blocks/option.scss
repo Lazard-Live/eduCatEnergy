@@ -1,4 +1,13 @@
+%pseudo-icon {
+  content: "";
+  top: 6px;
+  left: -69px;
+  position: absolute;
+  transform: translateY(-25%);
+}
+
 .option {
+  padding: 20px;
   background: $color-bg-option-gray;
 
   &:not(:last-of-type) {
@@ -6,34 +15,74 @@
   }
 
   &__title {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-  }
+    position: relative;
+    line-height: 37px;
+    text-transform: uppercase;
+    margin: 0 0 28px 72px;
 
-  &__img {
-    margin-right: 20px;
-
-    &_slim {
+    &_slim::before,
+    &_mass::before {
+      @extend %pseudo-icon;
       width: 50px;
-      height: 53px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $color-primary;
     }
 
-    &_mass {
-      width: 67px;
+    &_slim::after {
+      @extend %pseudo-icon;
+      top: 4px;
+      left: -64px;
       height: 50px;
+      width: 36px;
+      background: url("../images/icon/cat-slim.svg") no-repeat center/cover;
+    }
+
+    &_mass::after {
+      @extend %pseudo-icon;
+      top: 12px;
+      left: -78px;
+      height: 28px;
+      width: 67px;
+      background: url("../images/icon/cat-mass.svg") no-repeat center/cover;
     }
   }
 
   &__text {
-    margin: 0 0 20px 0;
-    padding: 0 20px;
-    font-family: 'Arial', sans-serif;
-    color: $color-gray-dark;
-    font-style: normal;
-    font-size: 14px;
+    color: #444;
+    font-family: "Arial", sans-serif;
     line-height: 18px;
+    margin: 0 0 22px;
   }
 
+  &__link {
+    @extend %transition;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: $color-black;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 16px;
+    width: 100%;
+    padding-top: 19px;
+    border-top: 1px solid #d9d9d9;
 
+    &::after {
+      @extend %transition;
+      content: "";
+      margin-left: 12px;
+      width: 24px;
+      height: 11px;
+      background: url("../images/icon/arrow.svg") no-repeat center/cover;
+    }
+
+    &:hover::after {
+      width: 32px;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
