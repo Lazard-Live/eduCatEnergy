@@ -11,12 +11,14 @@
   <body class="page">
     <header class="page__header header">
       <div class="header__wrap">
-        <svg class="header__logo">
-          <use xlink:href="images/sprite.svg#logo--mobile"></use>
-        </svg>
-        <svg class="header__logo-text">
-          <use xlink:href="images/sprite.svg#logo--logoText"></use>
-        </svg>
+        <picture>
+          <img
+            class="logo__img"
+            src="@webRoot/images/logo/mobile.svg"
+            width="193"
+            height="40"
+            alt="CAT ENERGY"
+        /></picture>
         <button class="nav-burger">
           <div class="nav-burger__wrap">
             <div class="nav-burger__icon"></div>
@@ -38,41 +40,50 @@
     </header>
 
     <main class="page__content">
+      <!-- Промо -->
       <section class="section promo">
         <div class="promo__bg">
           <div class="container promo__container">
-            <h1 class="title promo__title">Функциональное питание для котов</h1>
+            <h1 class="title title__lg promo__title">
+              Функциональное питание для котов
+            </h1>
             <div class="subtitle promo__subtitle">
               Занялся собой? Займись котом!
             </div>
-              <div class="promo__img"></div>
+            <div class="promo__img"></div>
             <a class="button promo__button" href="#">Подобрать программу</a>
           </div>
         </div>
       </section>
+      <!-- Option -->
       <section class="section">
         <div class="container">
+          <h2 class="visually-hidden">Подбор программы</h2>
           <div class="option">
-            <img class="option__img" src="#" alt="Худой кот" />
-            <h3 class="title option__title">Похудение</h3>
+            <h3 class="title title_md option__title option__title_slim">
+              Похудение
+            </h3>
             <p class="option__text">
               Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
             </p>
-            <a class="button option__button">каталог slim</a>
+            <a class="link option__link" href="#">каталог slim</a>
           </div>
           <div class="option">
-            <img class="option__img" src="#" alt="Сильный кот" />
-            <h3 class="title option__title">Набор массы</h3>
+            <h3 class="title title_md option__title option__title_mass">
+              Набор массы
+            </h3>
+
             <p class="option__text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a class="button option__button">каталог pro</a>
+            <a class="link option__link" href="#">каталог pro</a>
           </div>
         </div>
       </section>
+
       <section class="section">
         <div class="container">
           <h2 class="title">Как это работает</h2>

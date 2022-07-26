@@ -15,7 +15,6 @@ import stripCssComments from 'gulp-strip-css-comments';
 import minifyCss from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import jsInclude from 'gulp-include';
-import svgSprite from 'gulp-svg-sprite';
 
 const isProd = env.production;
 
@@ -51,13 +50,9 @@ const paths = {
     dest: `${distPath}/fonts`,
   },
   images: {
-    src: `${srcPath}/img/**/*.{jpg,png,gif,ico}`,
+    src: `${srcPath}/img/**/*.{jpg,png,gif,ico,svg}`,
     dest: `${distPath}/images`,
-  },
-  svgSprite: {
-    src: `${srcPath}/img/svg-sprite/**/*.svg`,
-    dest: `${distPath}/images`,
-  },
+  }
 };
 
 export const clean = () => {
@@ -121,24 +116,6 @@ export const images = () => {
       .pipe(bs.stream());
 };
 
-export const sprite = () => {
-  const fileName = 'sprite';
-
-  return src(paths.svgSprite.src)
-      .pipe(
-          svgSprite({
-            mode: {
-              symbol: {
-                dest: '.',
-                sprite: fileName,
-              },
-            },
-          })
-      )
-      .pipe(dest(paths.svgSprite.dest))
-      .pipe(bs.stream());
-};
-
 export const watcher = () => {
   bs.init({
     server: distPath,
@@ -152,10 +129,9 @@ export const watcher = () => {
   watch(paths.javaScript.watch, javaScript);
   watch(paths.fonts.src, fonts);
   watch(paths.images.src, images);
-  watch(paths.svgSprite.src, sprite);
 };
 
 
-export const build = parallel(html, scss, cssLibs, javaScript, fonts, images, sprite);
+export const build = parallel(html, scss, cssLibs, javaScript, fonts, images);
 
 export default series(clean, build, watcher);
