@@ -1,0 +1,20 @@
+.button {
+  position: relative;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+  text-align: center;
+  text-decoration: none;
+  background: $color-primary;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+
+  &:active {
+    color: transparentize($color-white, 0.7);
+  }
+}

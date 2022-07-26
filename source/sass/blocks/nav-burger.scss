@@ -1,0 +1,56 @@
+%burger-icon-line {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 24px;
+  background-color: $color-black;
+}
+
+.nav-burger {
+  padding: 0;
+  display: block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &__wrap {
+    position: relative;
+    width: 24px;
+    height: 18px;
+  }
+
+  &__icon {
+    @extend %burger-icon-line;
+    top: 8px;
+
+    &::before,
+    &::after {
+      @extend %burger-icon-line;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+  &_on {
+    .nav-burger__icon {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

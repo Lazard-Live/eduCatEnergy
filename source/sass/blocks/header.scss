@@ -1,0 +1,21 @@
+.header {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 20px 17px;
+  }
+
+  &__logo,
+  &__logo-text{
+    height: 38px;
+  }
+
+  &__logo {
+    width: 34px;
+  }
+
+  &__logo-text {
+    width: 101px;
+  }
+}

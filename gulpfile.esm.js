@@ -33,7 +33,7 @@ const paths = {
   },
   scss: {
     src: `${srcPath}/sass/style.scss`,
-    watch: [`${srcPath}/sass/style.scss`, `${srcPath}/{blocks,global}/**/*.scss`],
+    watch: [`${srcPath}/sass/style.scss`, `${srcPath}/sass/{blocks,global}/*.scss`],
     dest: `${distPath}/css`,
   },
   cssLibs: {
@@ -51,11 +51,11 @@ const paths = {
     dest: `${distPath}/fonts`,
   },
   images: {
-    src: `${srcPath}/images/**/*.{jpg,png,gif,ico}`,
+    src: `${srcPath}/img/**/*.{jpg,png,gif,ico}`,
     dest: `${distPath}/images`,
   },
   svgSprite: {
-    src: `${srcPath}/images/svg-sprite/**/*.svg`,
+    src: `${srcPath}/img/svg-sprite/**/*.svg`,
     dest: `${distPath}/images`,
   },
 };
