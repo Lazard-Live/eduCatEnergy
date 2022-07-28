@@ -1,0 +1,17 @@
+.contacts {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    color: $color-gray-dark;
+    line-height: 20px;
+  }
+}
