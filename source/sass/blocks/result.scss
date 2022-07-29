@@ -1,0 +1,118 @@
+.result {
+  padding: 20px;
+
+  &__title {
+    line-height: 40px;
+    padding-bottom: 28px;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 25px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 36px;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 124px;
+    height: 64px;
+    list-style-type: none;
+    border: 2px solid $color-gray;
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 24px;
+
+    &:last-of-type {
+      text-align: center;
+      position: absolute;
+      bottom: -18px;
+      width: 87px;
+      color: $color-gray-dark;
+      font-family: $font-secondary;
+      font-size: 12px;
+      line-height: 12px;
+      background-color: $color-bg-option-gray;
+    }
+  }
+
+  &__end {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding-bottom: 42px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 240px;
+
+    &_before {
+      background: url("../images/result/before-mobile.png") no-repeat center;
+    }
+
+    &_after {
+      background: url("../images/result/after-mobile.png") no-repeat center;
+    }
+  }
+
+  &__range {
+    display: flex;
+    column-gap: 2px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 5px;
+
+    & span {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 70px;
+    }
+  }
+
+  &__slider {
+    box-sizing: content-box;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 6px;
+    width: 84px;
+    height: 14px;
+    background-color: $color-white;
+    border: 1px solid $color-gray;
+    border-radius: 6px;
+
+    &_right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__toggle {
+    width: 35px;
+    height: 6px;
+    background-color: $color-primary;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
