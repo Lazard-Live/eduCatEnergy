@@ -1,10 +1,23 @@
 .contacts {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  position: relative;
 
+  &__map {
+    @media (max-width: $mobile-width-only) {
+      height: 362px;
+      width: 100%;
+      background: url("../images/maps/mobile.jpg") no-repeat center/cover;
+    }
+  }
+
+  &__float-block {
+    margin-top: -20px;
+    padding: 28px 20px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    background-color: $color-white;
+  }
   &__title {
     text-transform: uppercase;
   }
