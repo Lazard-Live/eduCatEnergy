@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__item {
+  padding: 20px 0;
+
+    &:not(:last-of-type) {
+    border-bottom: 1px solid $color-gray;
+  }
+  }
+}

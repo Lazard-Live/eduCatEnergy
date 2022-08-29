@@ -1,0 +1,15 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-gray-dark;
+  fill: $color-gray-dark;
+
+  &__link {
+    height: 32px;
+    width: 27px;
+  }
+}
