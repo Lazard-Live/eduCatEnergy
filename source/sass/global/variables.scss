@@ -8,6 +8,10 @@ $color-bg-gray: #EAEAEA;
 $color-bg-basic-gray: #F2F2F2;
 $color-gray-dark: #444;
 
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
 %transition {
   transition: 0.3s ease;
 }

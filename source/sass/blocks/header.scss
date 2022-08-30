@@ -1,4 +1,11 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+
   &__wrap {
     display: flex;
     justify-content: space-between;
