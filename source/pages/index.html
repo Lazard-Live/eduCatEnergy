@@ -12,13 +12,23 @@
     <header class="page__header header">
       <div class="header__wrap">
         <picture>
+          <source media="(max-width: 320px)"
+            srcset="@webRoot/images/logo/header/mobile.svg"
+          />
+          <source media="(min-width: 320px) and (max-width: 768px)"
+                  srcset="@webRoot/images/logo/header/tablet.svg"
+          />
+          <source media="(min-width: 768px) and (max-width: 1440px)"
+                  srcset="@webRoot/images/logo/header/desktop.svg"
+          />
           <img
             class="logo__img"
-            src="@webRoot/images/logo/mobile.svg"
+            src="@webRoot/images/logo/header/mobile.svg"
             width="193"
             height="40"
             alt="CAT ENERGY"
-        /></picture>
+          />
+        </picture>
         <button class="nav-burger">
           <div class="nav-burger__wrap">
             <div class="nav-burger__icon"></div>
@@ -26,7 +36,7 @@
         </button>
       </div>
 
-      <ul class="nav visually-hidden">
+      <ul class="nav nav_off">
         <li class="nav__item">
           <a class="nav__link" href="#">Главная</a>
         </li>

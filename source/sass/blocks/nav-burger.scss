@@ -9,10 +9,14 @@
 
 .nav-burger {
   padding: 0;
-  display: block;
+  display: none;
   background: transparent;
   border: none;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
 
   &__wrap {
     position: relative;

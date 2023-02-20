@@ -2,7 +2,7 @@
   position: relative;
 
   &__map {
-    @media (max-width: $mobile-width-only) {
+    @media (max-width: $mobile-width) {
       height: 362px;
       width: 100%;
       background: url("../images/maps/mobile.jpg") no-repeat center/cover;

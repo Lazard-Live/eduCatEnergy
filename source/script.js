@@ -6,10 +6,10 @@ window.onload = function () {
 
         if (event.currentTarget.classList.contains('nav-burger_on')) {
             event.currentTarget.classList.remove('nav-burger_on');
-            nav.classList.add('visually-hidden');
+            nav.classList.add('nav_off');
         } else {
             event.currentTarget.classList.add('nav-burger_on');
-            nav.classList.remove('visually-hidden');
+            nav.classList.remove('nav_off');
         }
     }
 

@@ -2,21 +2,37 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   list-style-type: none;
 
+  @media (max-width: $tablet-width) {
+    flex-wrap: wrap;
+  }
+
+  &_off {
+    display: flex;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
   &__item {
-    padding: 22px 0;
+    padding: 22px 12px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
-    width: 100%;
-    border-top: 1px solid $color-gray;
 
-    &:last-child {
-      border-bottom: 1px solid $color-gray;
+    @media (max-width: $tablet-width) {
+
+      width: 100%;
+      border-top: 1px solid $color-gray;
+
+      &:last-child {
+        border-bottom: 1px solid $color-gray;
+      }
     }
   }
 
